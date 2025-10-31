@@ -1,5 +1,5 @@
 /* fonts */
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* tailwind */
 @import "tailwindcss";
@@ -23,6 +23,7 @@
   --background-image-bg-img-1: url("/img-1.png");
   --background-image-bg-img-2: url("/img-2.png");
   --background-image-feature-bg: url("/feature-bg.png");
+  --background-image-hero-bg: url("/hero-bg.png");
   --background-image-pattern: url("/pattern.png");
   --background-image-pattern-2: url("/pattern-bg.png");
 

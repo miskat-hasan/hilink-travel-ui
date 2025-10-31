@@ -1,11 +1,17 @@
+import Camp from "@/components/Camp";
+import Feature from "@/components/Feature";
+import GetApp from "@/components/GetApp";
+import Guide from "@/components/Guide";
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
     <div>
-      <h1 className="text-red-900">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe eum
-        beatae odit architecto molestiae, illo cupiditate incidunt, dolore
-        mollitia aut soluta est nam a! Natus quod nostrum non dolore mollitia?
-      </h1>
+      <Hero />
+      <Camp />
+      <Guide />
+      <Feature />
+      <GetApp />
     </div>
   );
 }

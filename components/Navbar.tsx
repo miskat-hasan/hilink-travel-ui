@@ -2,14 +2,15 @@ import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Button from "./Button";
 
 const Navbar = () => {
   return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
+    <nav className="flexBetween max-container padding-container relative z-30 py-5 bg-white">
       <Link href={"/"}>
         <Image src="/logo.svg" alt="Logo" width={74} height={29} />
       </Link>
-      <div className="flexCenter gap-12 max-lg:hidden">
+      <ul className="flex items-center gap-12 pb-1.5 max-lg:hidden">
         {NAV_LINKS.map(({ href, key, label }) => (
           <Link
             key={key}
@@ -19,14 +20,18 @@ const Navbar = () => {
             {label}
           </Link>
         ))}
-      </div>
-      <Link
-        href={"/login"}
-        className="px-6 py-2 bg-primary text-white rounded-full bg-gray-90 flexCenter gap-2 max-lg:hidden"
-      >
-        <Image src="/user.svg" alt="Login" width={16} height={16} />
-        Login
+      </ul>
+      <Link href={"/login"} className="flex items-center max-lg:hidden">
+        <Button
+          type="button"
+          label="Login"
+          icon="/user.svg"
+          variant="btn_dark_green"
+        />
       </Link>
+      <div className="lg:hidden cursor-pointer">
+        <Image src="/menu.svg" alt="Menu" width={28} height={28} />
+      </div>
     </nav>
   );
 };
