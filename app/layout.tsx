@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,10 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        <Navbar />
-        <main className="relative overflow-hidden">{children}</main>
-        <Footer />
+      <body className={`antialiased`} cz-shortcut-listen="true">
+        <Providers>
+          <Navbar />
+          <main className="relative overflow-hidden">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
